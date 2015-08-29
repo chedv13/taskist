@@ -1,0 +1,26 @@
+<div class="ui card" ng-repeat="post in posts">
+    <div class="image">
+        <img src="{$ post.attributes.image $}">
+    </div>
+    <div class="content">
+        <a class="header">Kristy</a>
+
+        <div class="meta">
+            <span class="date">Joined in 2013</span>
+        </div>
+        <div class="description">
+            {$ post.attributes.title $}
+        </div>
+    </div>
+    <div class="extra content">
+        <a>
+            <i class="user icon"></i>
+            22 Friends
+        </a>
+    </div>
+</div>
+
+{#{% for o in posts %}#}
+{#    <div>{{ o }}</div>#}
+{#    {$ test $}#}
+{#{% endfor %}#}

@@ -1,0 +1,3 @@
+[run]
+include = taskist/*
+omit = *migrations*

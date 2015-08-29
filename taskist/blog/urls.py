@@ -9,5 +9,8 @@ urlpatterns = [
     ),
     url(
         r'^post/$', views.PostFormView.as_view()
+    ),
+    url(
+        r'^post_card/$', views.PostCardView.as_view()
     )
 ]

@@ -1,4 +1,4 @@
-window.Taskist = angular.module('taskist', ['ngRoute', 'ngResource'])
+window.Taskist = angular.module('taskist', ['ngRoute', 'ngResource', 'akoenig.deckgrid'])
     .config(function ($httpProvider, $interpolateProvider) {
         $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -10,7 +10,4 @@ window.Taskist = angular.module('taskist', ['ngRoute', 'ngResource'])
                 templateUrl: '/blog/posts',
                 controller: 'MainCtrl'
             });
-        //.when('/', {
-        //    templateUrl: '/static/templates/index.html'
-        //});
     });

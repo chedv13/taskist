@@ -1,28 +1,4 @@
-<div class="ui card" ng-repeat="post in posts.data">
-    <div class="content">
-        <div class="right floated meta">14h</div>
-        <img class="ui avatar image" ng-src="{$ posts.included[$index].attributes.avatar $}">
-        &nbsp;&nbsp;
-        {$ post.attributes.title $}
-    </div>
-    <div class="image">
-        <img ng-src="{$ post.attributes.image $}">
-    </div>
-    <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-        <i class="comment icon"></i>
-        3 comments
-    </div>
-    <div class="content">
-
-    </div>
-    <div class="extra content">
-        <div class="ui large transparent left icon input">
-            <i class="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment...">
-        </div>
-    </div>
+<div>
+    <div class="deckgrid posts main" deckgrid="" source="posts"
+         cardTemplate="/blog/post_card"></div>
 </div>

@@ -30,9 +30,10 @@
     {% endblock %}
 
     {% block angular %}
-        <script src="{% static 'js/angular.min.js' %}"></script>
-        <script src="{% static 'js/angular-route.min.js' %}"></script>
-        <script src="{% static 'js/angular-resource.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular-route.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular-resource.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular-deckgrid.js' %}"></script>
     {% endblock %}
 
 </head>
@@ -81,7 +82,7 @@
     {% endif %}
 
     {% block content %}
-        <div ng-view></div>
+        <div class="row" ng-view></div>
     {% endblock content %}
 </div>
 <!-- /container -->
@@ -93,11 +94,11 @@
 <!-- Placed at the end of the document so the pages load faster -->
 {% block javascript %}
     <!-- Latest JQuery -->
-    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
 
     <!-- Latest compiled and minified JavaScript -->
     {#    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>#}
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
     <!-- Your stuff: Third-party javascript libraries go here -->
     {#    <script src="{% static 'js/semantic.min.js' %}"></script>#}
     <script src="{% static 'semantic-ui/dist/semantic.min.js' %}" rel="stylesheet"></script>

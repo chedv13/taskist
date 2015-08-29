@@ -24,3 +24,12 @@ class PostFormView(TemplateView):
         context.update(post_form=PostForm())
 
         return context
+
+
+class PostCardView(TemplateView):
+    template_name = 'blog/post_card.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(PostCardView, self).get_context_data(**kwargs)
+
+        return context

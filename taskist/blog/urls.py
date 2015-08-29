@@ -6,5 +6,8 @@ urlpatterns = [
         regex=r'^posts/$',
         view=views.PostListView.as_view(),
         name='list'
+    ),
+    url(
+        r'^post/$', views.PostFormView.as_view()
     )
 ]

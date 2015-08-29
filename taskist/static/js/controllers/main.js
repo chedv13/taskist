@@ -1,6 +1,6 @@
 Taskist.controller('MainCtrl', function ($scope, PostProvider) {
     $scope.postsData = PostProvider.query({}, function () {
-        $scope.posts = $scope.postsData.data;
+        $scope.posts = $scope.postsData;
 
         console.log($scope.posts);
 

@@ -8,10 +8,12 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from rest_framework.routers import DefaultRouter
-from taskist.blog import views
+from taskist.blog import views as blog_views
+from taskist.users import views as users_views
 
 router = DefaultRouter()
-router.register(r'posts', views.PostViewSet)
+router.register(r'posts', blog_views.PostViewSet)
+router.register(r'users', users_views.UserViewSet)
 
 # router.register(r'groups', views.GroupViewSet)
 

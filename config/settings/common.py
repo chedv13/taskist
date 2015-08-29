@@ -41,7 +41,9 @@ THIRD_PARTY_APPS = (
     'allauth.socialaccount',  # registration
     'rest_framework',
     'djangular',
-    'polymorphic'
+    'polymorphic',
+    'easy_thumbnails',
+    'mptt'
 )
 
 # Apps specific for this project go here.
@@ -291,4 +293,13 @@ REST_FRAMEWORK = {
         'rest_framework_json_api.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ),
+}
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'size': (50, 50),
+        'autocrop': True,
+        'crop': 'smart',
+        'upscale': True
+    }
 }

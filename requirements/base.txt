@@ -42,3 +42,5 @@ djangorestframework==3.2.2
 djangorestframework-jsonapi==2.0.0-alpha.2
 django-angular==0.7.15
 django-polymorphic==0.7.1
+easy-thumbnails==2.2
+django-mptt==0.7.4

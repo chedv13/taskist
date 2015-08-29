@@ -15,9 +15,3 @@ class PostViewSet(viewsets.ModelViewSet):
 
 class PostListView(ListView):
     model = Post
-
-
-def main_view(request):
-    t = loader.get_template('views/main.html')
-    c = Context({'posts': [1, 2, 3]})
-    return HttpResponse(t.render(c))

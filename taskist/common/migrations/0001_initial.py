@@ -9,39 +9,36 @@ class Migration(migrations.Migration):
     dependencies = [
         ('contenttypes', '0002_remove_content_type_name'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('core', '__first__'),
     ]
 
     operations = [
         migrations.CreateModel(
             name='Comment',
             fields=[
-                ('timestampedmodel_ptr',
-                 models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False,
-                                      to='core.TimeStampedModel')),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('object_id', models.PositiveIntegerField()),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('content_type', models.ForeignKey(to='contenttypes.ContentType')),
                 ('user', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'ordering': ['-created'],
+                'ordering': ['-created_at'],
             },
-            bases=('core.timestampedmodel',),
         ),
         migrations.CreateModel(
             name='Like',
             fields=[
-                ('timestampedmodel_ptr',
-                 models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False,
-                                      to='core.TimeStampedModel')),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('object_id', models.PositiveIntegerField()),
                 ('text', models.TextField()),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('content_type', models.ForeignKey(to='contenttypes.ContentType')),
                 ('user', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'ordering': ['-created'],
+                'ordering': ['-created_at'],
             },
-            bases=('core.timestampedmodel',),
         ),
     ]

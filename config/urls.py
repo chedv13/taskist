@@ -23,21 +23,11 @@ urlpatterns = [
 
 urlpatterns += [url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
                 url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name="about"),
-                # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-                # Django Admin
-                # url(r'', include(router.urls)),
                 url(r'^admin/', include(admin.site.urls)),
-                # url(r'^api/', include(router.urls, namespace='api')),
-                # User management
-
                 url(r'^users/', include("taskist.users.urls", namespace="users")),
                 url(r'^blog/', include("taskist.blog.urls", namespace="posts")),
-
-                url(r'^accounts/', include('allauth.urls')),
-                # Your stuff: custom urls includes go here
-                # url(r'^djangular/', include('djangular.urls')),
-                url(r'^views/main.html/$', 'taskist.blog.views.main_view')] + static(settings.MEDIA_URL,
-                                                                                     document_root=settings.MEDIA_ROOT)
+                url(r'^accounts/', include('allauth.urls'))] + static(settings.MEDIA_URL,
+                                                                      document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit

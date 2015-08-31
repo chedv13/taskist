@@ -47,6 +47,15 @@
     width: 25%;
 }
 
+.posts.main.deckgrid .column {
+    float: left;
+    padding: 0 10px;
+}
+
+.posts.main.deckgrid .column .card {
+    margin-top: 20px;
+}
+
 .posts.users.deckgrid[deckgrid]::before {
     content: '3 .column.column-1-3';
     font-size: 0;
